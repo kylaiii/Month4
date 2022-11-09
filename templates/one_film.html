@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+       <h2><a href="{{ film.id }}"></a>Название:{{ film.name }}</h2>
+        <img src="{% if film.pages %}{{ film.pages.url}}{% endif %}" alt="..." style="width: 200px ">
+        <p>{{ film.author }}</p>
+        <p>{{ film.rating }}</p>
+        <p>{{ film.duration }}</p>
+        <p>{{film.director}}</p>
+{% endblock %}
